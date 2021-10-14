@@ -1,0 +1,45 @@
+<p>
+    Задание : 
+</p>
+<p> 1.	Создать страницу с динамическим содержанием "Проверка значений, введенных пользователем в поля формы для регистрации". 
+    Форма должна содержать поля «Имя», «Фамилия», «Наименование организации», «Номер кредитной карты», «Номер телефона», «Адрес электронной почты»,
+    кнопки «Отправить» и «Очистить».</p>
+<p>2.	Осуществить проверку заполненности данными всех полей. </p>
+<p>3.	Построить шаблон для проверки данных кредитной карточки с ограничением количества попыток неправильного ввода данных.</p>
+<p>4.	Последняя проверка должна контролировать структуру и содержимое полей (правильность ввода имени и фамилии,номера телефона,электронного адреса.).</p>
+<p> 5.  Дана строка 'ave a#a a2a a$a a4a a5a a-a aca'. Напишите регулярное выражение, которое заменит все пробелы на '!'.</p>
+<link rel="stylesheet" href="lr4.css" />
+<form action="#" method="POST">
+    <ul>
+        <li>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" pattern="[A-Za-z\s]*" required>
+        </li>
+        <li>
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" pattern="[A-Za-z\s]*" required>
+        </li>
+        <li>
+            <label for="orgname">Наименование организации:</label>
+            <input type="text" id="orgname" required>
+        </li>
+        <li>
+            <label for="credit_card_num">Номер кредитной карты:</label>
+            <input type="text" id="credit_card_num" pattern="[0-9]{16}" required>
+        </li>
+        <li>
+            <label for="telephone_num">Номер телефона:</label>
+            <input type="text" id="telephone_num" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})" required>
+        </li>
+        <li>
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" id="email" required>
+        </li>
+        <li class="button">
+            <button type="submit">Отправить</button>
+        </li>
+        <li class="button">
+            <button type="reset">Очистить</button>
+        </li>
+    </ul>
+</form>

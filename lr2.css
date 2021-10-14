@@ -1,0 +1,15 @@
+@keyframes fromRightToLeft {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: calc(100% - 400px);
+    }
+}
+
+img
+{
+    float: right;
+    margin-right: calc(100% - 400px);
+    animation: fromRightToLeft 10s;
+}

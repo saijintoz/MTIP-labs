@@ -1,0 +1,31 @@
+#clear {  
+    width: calc(100% - 10px);  
+}  
+
+form {
+    border: solid #000;
+    border-width: 2px;
+}
+  
+.formstyle  {  
+    width: 300px;  
+    height: 500px;  
+    margin: auto;  
+    border: 2px black;   
+    padding: 20px;  
+    font-size: 0px;
+}  
+  
+input  {  
+    width: calc(100%/4 - 10px);  
+    background-color: whitesmoke;     
+    padding: 20px;  
+    margin: 5px;  
+    font-size: 15px;  
+}  
+  
+#answer_field{  
+    width: calc(100% - 10px);  
+    border: 3px solid gray;
+    padding: 20px;   
+}  
