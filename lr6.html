@@ -1,0 +1,43 @@
+<script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+<link rel="stylesheet" href="lr6.css" />
+<div id="frameHeightCalcDiv">
+    <button onclick="doThings()" id="button">Кнопка</button>
+    <div id="image-wrapper">
+        <img id="my-image" src="img/Lab6p1.PNG"/>
+        <p id="text">Иванов Иван Иванович</p>
+    </div>
+</div>
+<script type="text/javascript">
+    var frameHeight;
+    var counter = 1;
+    $(document).ready(function() {
+        frameHeight = $("#frameHeightCalcDiv").height();
+    })
+    function doThings() 
+    {
+        switch(counter){
+            case 1:
+                $("#my-image").css("display", "block");
+                break;
+            case 2:
+                $("#text").css("display", "block");
+                break;
+            case 3:
+                $("#my-image").css("transform", "scale(0.5)");
+                break;
+            case 4:
+                $("#image-wrapper").animate({paddingTop: "+=" + (frameHeight - $("#my-image").height() - $("#text").height() - $("#button").height()) + "px"}, 2000);
+                break;
+            case 5:
+                $("#my-image").attr("src", "img/Lab6p2.png");
+                break;
+            case 6:
+                $("#my-image").animate({opacity: "0%"}, 1000);
+                break;
+            default:
+                break;
+        }
+        counter += 1;
+    };
+</script>

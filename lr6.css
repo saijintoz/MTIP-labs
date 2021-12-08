@@ -1,0 +1,18 @@
+#frameHeightCalcDiv{
+    width: 0 auto;
+    height: 100%;
+}
+
+#my-image{
+    display: none;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#text{
+    display: none;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+<script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on('dblclick', function(evt) {
+        location.href="#openModal" 
+        document.getElementById("modal-text").textContent = evt.target.tagName;
+        //alert(evt.target.tagName);
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready( function() 
+        {
+            $("#moving_text").animate({
+                left: "+=50%"
+            }, 5000);
+            $("#moving_text").animate({
+                fontSize: "+=20px"
+            }, 1000);
+            $("#moving_text").animate({
+                color: "yellow"
+            }, 1000);
+            $("#moving_text").animate({
+                left: "+=40%",
+                fontSize: "+=20px"
+            }, 5000);
+        }
+    );
+    
+</script>
+<link rel="stylesheet" href="lr5.css" />
+<div id="openModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Модальное окно</h3>
+          <a href="#close" title="Close" class="close">×</a>
+        </div>
+        <div class="modal-body">    
+          <p id="modal-text"></p>
+        </div>
+      </div>
+    </div>
+</div>
+<p id="moving_text" style="position: relative; color: blue; width: fit-content;">Текст</p>
+<form>
+    Введите пароль <input type="password"/><br/>
+    Я хочу ввести контрольное слово<input id="visibility-checkbox" type="checkbox"/><br/>
+    <div id="hidden-input" style="visibility: hidden">
+    Введите контрольное слово: <input type="text" />
+    </div>
+</form>
+<script type="text/javascript">
+    $(document.getElementById("visibility-checkbox")).on('click', function(evt) {
+        if ($('#visibility-checkbox').is(':checked')){
+            document.getElementById("hidden-input").setAttribute("style", "visibility: visible")
+        } else {
+            document.getElementById("hidden-input").setAttribute("style", "visibility: hidden")
+        }
+    });
+</script>
