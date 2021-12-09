@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Timetables [
+    <!ELEMENT Timetables (Timetable)+>
+    <!ELEMENT Timetable (Specialization, Doctor, Days_of_attending, Time_of_attending, Room)>
+    <!ELEMENT Specialization (#PCDATA)>
+    <!ELEMENT Doctor (Name, Surname, Patronymic)>
+        <!ELEMENT Name (#PCDATA)>
+        <!ELEMENT Surname (#PCDATA)>
+        <!ELEMENT Patronymic (#PCDATA)>
+    <!ELEMENT Days_of_attending (#PCDATA)>
+    <!ELEMENT Time_of_attending (#PCDATA)>
+    <!ELEMENT Room (#PCDATA)>
+]>

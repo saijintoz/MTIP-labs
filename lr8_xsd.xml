@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Timetables">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="Timetable"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Timetable">
+        <xs:complexType>
+            <xs:element ref="Specialization"/>
+            <xs:element ref="Doctor"/>
+            <xs:element ref="Days_of_attending"/>
+            <xs:element ref="Time_of_attending"/>
+            <xs:element ref="Room"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Specialization" type="xs:string"/>
+    <xs:element name="Doctor"/>
+        <xs:complexType>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Surname" type="xs:string"/>
+            <xs:element name="Patronymic" type="xs:string"/>
+        </xs:complexType>
+    <xs:element name="Days_of_attending" type="xs:string"/>
+    <xs:element name="Time_of_attending" type="xs:string"/>
+    <xs:element name="Room" type="xs:integer"/>
+</xs:schema>

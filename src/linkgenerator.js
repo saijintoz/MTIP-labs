@@ -2,7 +2,7 @@ window.onload = addLinks();
 
 function addLinks(){
     var elem = document.getElementById("labSidebar");
-    for (var i = 1; i < 13; i++){
+    for (var i = 1; i < 11; i++){
         let a = document.createElement("a");
         a.textContent = "Лабораторная работа " + i;
         a.id = "lr" + i + "link";
@@ -48,11 +48,5 @@ function swapFrame(elem){
         case 'lr10link':
             labframe.src = "lr10.html";
             break;
-        case 'lr11link':
-            labframe.src = "lr11.html";
-            break;
-        case 'lr12link':
-            labframe.src = "lr12.html";
-            break;   
     }
 }

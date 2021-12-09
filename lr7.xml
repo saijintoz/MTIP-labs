@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE Timetables SYSTEM "lr8_dtd.xml">
+<Timetables>
+    <Timetable>
+        <Specialization>Психиатр</Specialization>
+        <Doctor>
+            <Name>Иван</Name>
+            <Surname>Иванович</Surname>
+            <Patronymic>Иванов</Patronymic>
+        </Doctor>   
+        <Days_of_attending>Пн-Ср</Days_of_attending>
+        <Time_of_attending>11:00-15:00</Time_of_attending>
+        <Room>301</Room>
+    </Timetable>
+    <Timetable>
+        <Specialization>Педиатр</Specialization>
+        <Doctor>
+            <Name>Петр</Name>
+            <Surname>Петров</Surname>
+            <Patronymic>Петрович</Patronymic>
+        </Doctor>   
+        <Days_of_attending>Вт-Чт</Days_of_attending>
+        <Time_of_attending>10:00-14:00</Time_of_attending>
+        <Room>302</Room>
+    </Timetable>
+    <Timetable>
+        <Specialization>Терапевт</Specialization>
+        <Doctor>
+            <Name>Степан</Name>
+            <Surname>Степанов</Surname>
+            <Patronymic>Степанович</Patronymic>
+        </Doctor>   
+        <Days_of_attending>Пн-Пт</Days_of_attending>
+        <Time_of_attending>10:00-15:00</Time_of_attending>
+        <Room>303</Room>
+    </Timetable>
+</Timetables>
