@@ -1,0 +1,49 @@
+<script>
+    this.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.XMLHttpRequest) {
+        xhttp = new XMLHttpRequest();
+        } else {    // IE 5/6
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.open("GET", "../lr9.xml", false);
+        xhttp.send(null);
+        xmlDoc = xhttp.responseXML; 
+            var specialization, doctor, days_of_att, time_of_att, room, row;
+            var data = new window.DOMParser().parseFromString(xmlDoc.text, "text/xml");
+            Array.prototype.slice.call(data.getElementsByTagName("Timetable"))
+                .forEach(function (node) {
+                    specialization = node.childNodes[1].textContent;
+                    doctor = node.childNodes[3].textContent;
+                    days_of_att = node.childNodes[5].textContent;
+                    time_of_att = node.childNodes[7].textContent;
+                    room = node.childNodes[9].textContent;
+                    row = document.createElement('tr');
+                    row.innerHTML = '<tr><td>' + specialization + 
+                                    '</td><td>' + doctor + 
+                                    '</td><td>' + days_of_att + 
+                                    '</td><td>' + time_of_att + 
+                                    '</td><td>' + room + '</tr>';
+                    document.getElementById('table').appendChild(row);
+
+        });
+    });
+</script>
+
+<p>
+1.	Загрузите документ XML, разработанный в предыдущих работах, в объект документ и отобразите в окне браузера.<br/>
+2.	Используя методы DOM XML, сформируйте HTML страницу, содержащую таблицу из нескольких столбцов.<br/> 
+3.	Используя методы DOM XML, замените цифровые значения их словесными эквивалентами.
+</p>
+<table id="table">
+    <tr>
+        <th>Специализация</th>
+        <th>Врач</th>
+        <th>Дни приёма</th>
+        <th>Время приёма</th>
+        <th>Кабинет</th>
+    </tr>
+</table>

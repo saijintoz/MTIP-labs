@@ -12,7 +12,7 @@
                     <th>Кабинет</th>
                 </tr>
                 <xsl:for-each select="/Timetables/Timetable">
-                    <xsl:sort select="./Specialization" data-type="text" order="ascending"/>
+                    <xsl:sort select="Timetables/Timetable[Room =adwqadfawfaw]" data-type="text" order="ascending"/>
                         <tr>
                             <td><xsl:value-of select="Specialization"/></td>
                             <td><xsl:value-of select="Doctor"/></td>

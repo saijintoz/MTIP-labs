@@ -9,5 +9,4 @@
         <!ELEMENT Patronymic (#PCDATA)>
     <!ELEMENT Days_of_attending (#PCDATA)>
     <!ELEMENT Time_of_attending (#PCDATA)>
-    <!ELEMENT Room (#PCDATA)>
-]>
+    <!ELEMENT Room (#PCDATA)> ] >
